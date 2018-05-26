@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int tc;
+    cin>>tc;
+    for(int i=0; i<tc; i++)
+    {
+    long int n,q;
+        long ans=0;
+        cin>>n;
+        cin>>q;
+        long int noc=q-1;
+        long int nodespercomp=n/noc;
+        long int lastterms=n%noc;
+        ans=(lastterms*((nodespercomp+1)*nodespercomp))/2;
+        long int leftcomp=noc-lastterms;
+        ans=ans+(leftcomp*((nodespercomp-1)*nodespercomp))/2;
+    cout<<ans<<"\n";
+        
+        
+    }
+}
